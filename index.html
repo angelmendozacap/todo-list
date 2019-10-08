@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Todo list</title>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <h1 class="title">Stuff I need to do</h1>
+
+  <div class="all-tasks">
+    <h2 class="task-list-title">My lists</h2>
+    <ul class="task-list" id="tasksLists"></ul>
+
+    <form id="newListForm">
+      <input type="text" name="listName" class="new list" placeholder="new list name" aria-label="new list name" />
+      <button class="btn create" aria-label="create new list">+</button>
+    </form>
+  </div>
+
+  <div class="todo-list" id="listDisplayContainer">
+    <div class="todo-header">
+      <h2 class="list-title" id="listTitle">YouTube</h2>
+      <p class="task-count" id="listCount">3 tasks remaining</p>
+    </div>
+
+    <div class="todo-body">
+      <div class="tasks" id="tasksContainer"></div>
+
+      <div class="new-task-creator">
+        <form id="newTaskForm">
+          <input type="text" name="title" class="new task" placeholder="new task name" aria-label="new task name" />
+          <button class="btn create" aria-label="create new task">+</button>
+        </form>
+      </div>
+
+      <div class="delete-stuff">
+        <button id="clearCompleteTasksButton" class="btn delete">Clear completed tasks</button>
+        <button id="deleteListButton" class="btn delete">Delete list</button>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+
+  <template id="task-template">
+    <div class="task">
+      <input type="checkbox">
+      <label>
+        <span class="custom-checkbox"></span>
+      </label>
+    </div>
+  </template>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
