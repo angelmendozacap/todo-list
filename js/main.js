@@ -75,7 +75,7 @@ async function createTask(task) {
 }
 
 async function changeStatus(idTask) {
-  const res = await fetch(`http://afedo-tasks.herokuapp.com/api/tasks/changeStatus.php?idTask=${idTask}`, {
+  const res = await fetch(`${BASE_URL}/tasks/changeStatus.php?idTask=${idTask}`, {
     method: 'POST',
   })
 
